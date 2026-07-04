@@ -1,0 +1,15 @@
+namespace: store
+deployment:
+  replicas: 1
+  imageName: devopsrinu/auth-service
+  imageVersion: v1
+
+hpa:
+  minReplicas: 1
+  maxReplicas: 3
+  averageUtilization: 10
+
+service:
+  targetPort: 8081
+  port: 8081
+

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feedback-service
+  namespace: {{ .Values.namespace }}
+  labels:
+    project: online-store
+    component: feedback-service
+spec:
+  replicas: {{.Values.deployment.replicas}}
+  selector:
+    matchLabels:
+      project: online-store
+      component: feedback-service
+  template:
+    metadata:
+      labels:
+        project: online-store
+        component: feedback-service
+    spec:
+      containers:
+      - name: feedback-service
+        image: "{{ .Values.deployment.imageName }}:{{ .Values.deployment.imageVersion }}"
+        imagePullPolicy: Always
+        ports:
+          - containerPort:  {{ .Values.service.targetPort }}
+        resources:
+          requests:
+            cpu: "50m"
+            memory: "64Mi"
+          limits:
+            cpu: 100m
+            memory: "128Mi"

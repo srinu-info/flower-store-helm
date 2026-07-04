@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: feedback-service
+  namespace: {{ .Values.namespace }}
+  labels:
+    project: online-store
+    component: feedback-service
+spec:
+  selector:
+    project: online-store
+    component: feedback-service
+  ports:
+    - protocol: TCP
+      port:  {{ .Values.service.port }}
+      targetPort:  {{ .Values.service.targetPort }}

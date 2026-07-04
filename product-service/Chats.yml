@@ -1,0 +1,5 @@
+apiVersion: v2
+name: product-service
+version: 1.0.0
+description: product-service-chart
+appVersion: "1.1"

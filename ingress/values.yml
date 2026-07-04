@@ -1,0 +1,15 @@
+namespace: store
+
+ingress:
+
+  className: alb
+
+  host: flower.svdvps.online
+
+  scheme: internet-facing
+
+  targetType: ip
+
+  groupName: devopsrinu
+
+  certificateArn: "arn:aws:acm:us-east-1:597819998113:certificate/478e67f5-666c-41e3-9b7f-c60fec8382ee"

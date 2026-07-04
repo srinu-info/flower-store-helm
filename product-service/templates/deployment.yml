@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-service
+  namespace: {{ .Values.namespace }}
+  labels:
+    project: online-store
+    component: product-service
+spec:
+  replicas: {{.Values.deployment.replicas}}
+  selector:
+    matchLabels:
+      project: online-store
+      component: product-service
+  template:
+    metadata:
+      labels:
+        project: online-store
+        component: product-service
+    spec:
+      containers:
+      - name: product-service
+        image: "{{ .Values.deployment.imageName }}:{{ .Values.deployment.imageVersion }}"
+        imagePullPolicy: Always
+        ports:
+          - containerPort:  {{ .Values.service.targetPort }}
+        resources:
+          requests:
+            cpu: "50m"
+            memory: "64Mi"
+          limits:
+            cpu: 100m
+            memory: "128Mi"
