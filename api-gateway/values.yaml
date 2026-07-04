@@ -6,8 +6,8 @@ deployment:
 
 hpa:
   minReplicas: 1
-  maxReplicas: 3
-  averageUtilization: 70
+  maxReplicas: 2
+  averageUtilization: 80
 
 service:
   targetPort: 8080
