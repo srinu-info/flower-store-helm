@@ -7,7 +7,7 @@ deployment:
 hpa:
   minReplicas: 1
   maxReplicas: 3
-  averageUtilization: 10
+  averageUtilization: 70
 
 service:
   targetPort: 8085
