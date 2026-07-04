@@ -6,7 +6,7 @@ deployment:
 
 hpa:
   minReplicas: 1
-  maxReplicas: 2
+  maxReplicas: 1
   averageUtilization: 80
 
 service:
