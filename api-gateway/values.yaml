@@ -2,7 +2,7 @@ namespace: store
 deployment:
   replicas: 1
   imageName: devopsrinu/api-gateway
-  imageVersion: v1
+  imageVersion: v2
 
 hpa:
   minReplicas: 1
