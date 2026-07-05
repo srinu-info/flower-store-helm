@@ -1,7 +1,7 @@
 namespace: store
 deployment:
   replicas: 1
-  imageName: devopsrinu/api-gateway
+  imageName: devopsrinu/feedback-service
   imageVersion: v1
 
 hpa:
