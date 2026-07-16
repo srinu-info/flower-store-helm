@@ -1,5 +1,5 @@
 REGION_CODE=us-east-1
-CLUSTER_NAME=roboshop
+CLUSTER_NAME=flower-store-dev
 ACC_ID=597819998113
 
 ### Create OIDC Provider [EKS-IAM]
