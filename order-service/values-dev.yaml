@@ -1,7 +1,7 @@
 namespace: store
 deployment:
   replicas: 1
-  imageName: devopsrinu/order-service
+  imageName: 597819998113.dkr.ecr.us-east-1.amazonaws.com/flower-store/order-service
   imageVersion: v1
 
 hpa:

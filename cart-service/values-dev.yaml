@@ -1,0 +1,15 @@
+namespace: store
+deployment:
+  replicas: 1
+  imageName: 597819998113.dkr.ecr.us-east-1.amazonaws.com/flower-store/cart-service
+  imageVersion: 1.0.0
+
+hpa:
+  minReplicas: 1
+  maxReplicas: 1
+  averageUtilization: 80
+
+service:
+  targetPort: 8083
+  port: 8083
+

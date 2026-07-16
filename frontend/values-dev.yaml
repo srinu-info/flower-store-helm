@@ -1,7 +1,7 @@
 namespace: store
 deployment:
   replicas: 1
-  imageName: devopsrinu/feedback-service
+  imageName: 597819998113.dkr.ecr.us-east-1.amazonaws.com/flower-store/frontend
   imageVersion: v1
 
 hpa:
@@ -10,6 +10,7 @@ hpa:
   averageUtilization: 80
 
 service:
-  targetPort: 8085
-  port: 8085
+  targetPort: 80
+  port: 80
+
 
