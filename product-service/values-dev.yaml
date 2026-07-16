@@ -2,7 +2,7 @@ namespace: store
 deployment:
   replicas: 1
   imageName: 597819998113.dkr.ecr.us-east-1.amazonaws.com/flower-store/product-service
-  imageVersion: v1
+  imageVersion: IMAGE_VERSION
 
 hpa:
   minReplicas: 1
