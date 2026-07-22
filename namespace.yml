@@ -1,8 +1,17 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: store
+  name: dev-store
   labels:
-    project: roboshop
+    project: store
+    
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: prod-store
+  labels:
+    project: store
     
   
+
